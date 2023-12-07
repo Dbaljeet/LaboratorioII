@@ -28,6 +28,13 @@
 			<artifactId>org.osgi.core</artifactId>
 			<version>6.0.0</version>
 		</dependency>
+			<dependency>
+				<groupId>cl.ucn.felix</groupId>
+				<artifactId>
+					cl.ucn.felix.biblioteca.servicio
+				</artifactId>
+				<version>1.0.0</version>
+			</dependency>
 	</dependencies>
 
 	<build>
