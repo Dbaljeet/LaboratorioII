@@ -56,7 +56,7 @@
 					</instructions>
 					<remoteOBR>repo-rel</remoteOBR>
 					<prefixUrl>
-						file:///home/dsanmartins/releases
+						file:///C:/Users/jeanl/Documents/GitHub/LaboratorioII/releases/api-impl
 					</prefixUrl>
 					<supportIncrementalBuild>true</supportIncrementalBuild>
 				</configuration>
@@ -110,7 +110,7 @@
 		<!-- releases repo -->
 		<repository>
 			<id>repo-rel</id>
-			<url>file:///home/dsanmartins/releases</url>
+			<url>file:///C:/Users/jeanl/Documents/GitHub/LaboratorioII/releases/api-impl</url>
 		</repository>
 	</distributionManagement>
 

@@ -1,0 +1,7 @@
+cl\ucn\felix\biblioteca\api\Libro.class
+cl\ucn\felix\biblioteca\api\Inventario$CriterioBusqueda.class
+cl\ucn\felix\biblioteca\api\ExcepcionLibroNoEncontrado.class
+cl\ucn\felix\biblioteca\api\LibroMutable.class
+cl\ucn\felix\biblioteca\api\ExcepcionLibroExistente.class
+cl\ucn\felix\biblioteca\api\Inventario.class
+cl\ucn\felix\biblioteca\api\ExcepcionLibroInvalido.class
