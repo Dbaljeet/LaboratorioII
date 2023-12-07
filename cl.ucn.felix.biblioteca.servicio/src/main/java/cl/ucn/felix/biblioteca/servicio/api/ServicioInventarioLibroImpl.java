@@ -55,26 +55,58 @@ public class ServicioInventarioLibroImpl implements ServicioInventarioLibro{
 	@Override
 	public Set<String> obtenerGrupos(String sesion)  {
 		// TODO Auto-generated method stub
-		return null;
+		Inventario inventario = buscarLibroEnInventario();
+		return inventario.getCategorias();
 		
 	}
 
 	@Override
 	public void adicionarLibro(String sesion, String isbn, String titulo, String autor, String categoria) {
 		// TODO Auto-generated method stub
+		this.chequearSesion(sesion);
+		Inventario inventario;
+		try {
+			inventario = buscarLibroEnInventario();
+		} catch (ExcepcionSesionNoValidaTiempoEjecucion e) {
+			e.printStackTrace();
+		}
+		LibroMutable newLibro = crearLibro(isbn);
+		newLibro.setTitulo(titulo);
+		newLibro.setAutor(autor);
+		newLibro.setCategoria(categoria);
+
+		String isbn = inventario.guardarLibro(newLibro);
 		
 	}
 
 	@Override
 	public void modificarCategoriaLibro(String sesion, String isbn, String categoria) {
 		// TODO Auto-generated method stub
+		this.chequearSesion(sesion);
+		Inventario inventario;
+		try {
+			inventario = buscarLibroEnInventario();
+		} catch (ExcepcionSesionNoValidaTiempoEjecucion e) {
+			e.printStackTrace();
+		}
+
+		LibroMutable libro = inventario.cargarLibro(isbn);
+
+		libro.setCategoria(categoria);
 		
 	}
 
 	@Override
 	public void removerLibro(String sesion, String isbn) {
 		// TODO Auto-generated method stub
-		
+		this.chequearSesion(sesion);
+		Inventario inventario;
+		try {
+			inventario = buscarLibroEnInventario();
+		} catch (ExcepcionSesionNoValidaTiempoEjecucion e) {
+			e.printStackTrace();
+		}
+		inventario.removerLibro(isbn);
 	}
 
 	@Override
@@ -88,19 +120,56 @@ public class ServicioInventarioLibroImpl implements ServicioInventarioLibro{
 	@Override
 	public Set<String> buscarLibrosPorCategoria(String sesion, String categoriaLike) {
 		// TODO Auto-generated method stub
-		return null;
+		this.chequearSesion(sesion);
+		Inventario inventario;
+		try {
+			inventario = buscarLibroEnInventario();
+		} catch (ExcepcionSesionNoValidaTiempoEjecucion e) {
+			e.printStackTrace();
+			return null;
+		}
+
+		Map<Inventario.CriterioBusqueda, String> criterio = Map.of(
+				Inventario.CriterioBusqueda.CATEGORIA_LIKE, categoriaLike
+		);
+
+		return inventario.buscarLibros(criterio);
 	}
 
 	@Override
 	public Set<String> buscarLibrosPorAutor(String session, String autorLike) {
 		// TODO Auto-generated method stub
-		return null;
+		Inventario inventario;
+		try {
+			chequearSesion(sesion);
+			inventario = buscarLibroEnInventario();
+		} catch (ExcepcionSesionNoValidaTiempoEjecucion e) {
+			e.printStackTrace();
+			return null;
+		}
+
+		Map<Inventario.CriterioBusqueda, String> criterio = Map.of(
+				Inventario.CriterioBusqueda.AUTOR_LIKE, autorLike
+		);
+		return inventario.buscarLibros(criterio);
 	}
 
 	@Override
 	public Set<String> buscarLibrosPorTitulo(String sesion, String tituloLike) {
 		// TODO Auto-generated method stub
-		return null;
+		Inventario inventario;
+		try {
+			inventario = buscarLibroEnInventario();
+		} catch (ExcepcionSesionNoValidaTiempoEjecucion e) {
+			e.printStackTrace();
+			return null;
+		}
+
+		Map<Inventario.CriterioBusqueda, String> criterio = Map.of(
+				Inventario.CriterioBusqueda.TITULO_LIKE, tituloLike
+		);
+
+		return inventario.buscarLibros(criterio);
 	}
 
 	private Inventario buscarLibroEnInventario() throws ExcepcionSesionNoValidaTiempoEjecucion {
