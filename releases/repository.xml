@@ -1,0 +1,65 @@
+<repository lastmodified='20231208100608.211'>
+  <resource id='cl.ucn.felix.biblioteca.api/1.0.0' symbolicname='cl.ucn.felix.biblioteca.api' presentationname='cl.ucn.felix.biblioteca.api' uri='file:/C:/Users/jeanl/Documents/GitHub/LaboratorioII/releases/cl/ucn/felix/cl.ucn.felix.biblioteca.api/1.0.0/cl.ucn.felix.biblioteca.api-1.0.0.jar' version='1.0.0'>
+    <size>7604</size>
+    <capability name='bundle'>
+      <p n='symbolicname' v='cl.ucn.felix.biblioteca.api'/>
+      <p n='presentationname' v='cl.ucn.felix.biblioteca.api'/>
+      <p n='version' t='version' v='1.0.0'/>
+      <p n='manifestversion' v='2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='cl.ucn.felix.biblioteca.api'/>
+      <p n='version' t='version' v='1.0.0'/>
+    </capability>
+  </resource>
+  <resource id='cl.ucn.felix.biblioteca.api.impl/1.0.0' symbolicname='cl.ucn.felix.biblioteca.api.impl' presentationname='cl.ucn.felix.biblioteca.api.impl' uri='file:/C:/Users/jeanl/Documents/GitHub/LaboratorioII/releases/cl/ucn/felix/cl.ucn.felix.biblioteca.api.impl/1.0.0/cl.ucn.felix.biblioteca.api.impl-1.0.0.jar' version='1.0.0'>
+    <size>9464</size>
+    <capability name='bundle'>
+      <p n='symbolicname' v='cl.ucn.felix.biblioteca.api.impl'/>
+      <p n='presentationname' v='cl.ucn.felix.biblioteca.api.impl'/>
+      <p n='version' t='version' v='1.0.0'/>
+      <p n='manifestversion' v='2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='cl.ucn.felix.biblioteca.api.impl'/>
+      <p n='version' t='version' v='1.0.0'/>
+      <p n='uses:' v='cl.ucn.felix.biblioteca.api'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=cl.ucn.felix.biblioteca.api)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package cl.ucn.felix.biblioteca.api;version="[1.0,2)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.8.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package org.osgi.framework;version="[1.8,2)"</require>
+  </resource>
+  <resource id='cl.ucn.felix.biblioteca.servicio/1.0.0' symbolicname='cl.ucn.felix.biblioteca.servicio' presentationname='cl.ucn.felix.biblioteca.servicio' uri='file:/C:/Users/jeanl/Documents/GitHub/LaboratorioII/releases/cl/ucn/felix/cl.ucn.felix.biblioteca.servicio/1.0.0/cl.ucn.felix.biblioteca.servicio-1.0.0.jar' version='1.0.0'>
+    <size>10159</size>
+    <capability name='bundle'>
+      <p n='symbolicname' v='cl.ucn.felix.biblioteca.servicio'/>
+      <p n='presentationname' v='cl.ucn.felix.biblioteca.servicio'/>
+      <p n='version' t='version' v='1.0.0'/>
+      <p n='manifestversion' v='2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='cl.ucn.felix.biblioteca.servicio.api'/>
+      <p n='version' t='version' v='1.0.0'/>
+      <p n='uses:' v='cl.ucn.felix.biblioteca.api,org.osgi.framework'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=cl.ucn.felix.biblioteca.api)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package cl.ucn.felix.biblioteca.api;version="[1.0,2)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.8.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package org.osgi.framework;version="[1.8,2)"</require>
+    <require name='package' filter='(&amp;(package=cl.ucn.felix.biblioteca.api.impl)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package cl.ucn.felix.biblioteca.api.impl;version="[1.0,2)"</require>
+  </resource>
+  <resource id='cl.ucn.felix.biblioteca.servicio.tui/1.0.0' symbolicname='cl.ucn.felix.biblioteca.servicio.tui' presentationname='cl.ucn.felix.biblioteca.servicio.tui' uri='file:/C:/Users/jeanl/Documents/GitHub/LaboratorioII/releases/cl/ucn/felix/cl.ucn.felix.biblioteca.servicio.tui/1.0.0/cl.ucn.felix.biblioteca.servicio.tui-1.0.0.jar' version='1.0.0'>
+    <size>7617</size>
+    <capability name='bundle'>
+      <p n='symbolicname' v='cl.ucn.felix.biblioteca.servicio.tui'/>
+      <p n='presentationname' v='cl.ucn.felix.biblioteca.servicio.tui'/>
+      <p n='version' t='version' v='1.0.0'/>
+      <p n='manifestversion' v='2'/>
+    </capability>
+    <capability name='package'>
+      <p n='package' v='cl.ucn.felix.biblioteca.servicios.tui'/>
+      <p n='version' t='version' v='1.0.0'/>
+      <p n='uses:' v='cl.ucn.felix.biblioteca.api,cl.ucn.felix.biblioteca.servicio.api,org.osgi.framework'/>
+    </capability>
+    <require name='package' filter='(&amp;(package=cl.ucn.felix.biblioteca.api)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package cl.ucn.felix.biblioteca.api;version="[1.0,2)"</require>
+    <require name='package' filter='(&amp;(package=cl.ucn.felix.biblioteca.servicio.api)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package cl.ucn.felix.biblioteca.servicio.api;version="[1.0,2)"</require>
+    <require name='package' filter='(&amp;(package=org.osgi.framework)(version&gt;=1.8.0)(!(version&gt;=2.0.0)))' extend='false' multiple='false' optional='false'>Import package org.osgi.framework;version="[1.8,2)"</require>
+  </resource>
+</repository>

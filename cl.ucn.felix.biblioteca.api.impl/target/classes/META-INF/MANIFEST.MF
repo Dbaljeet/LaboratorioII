@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1702083945906
+Build-Jdk-Spec: 18
+Bundle-Activator: cl.ucn.felix.biblioteca.inventario.activador.Inventari
+ oActivador
+Bundle-ManifestVersion: 2
+Bundle-Name: cl.ucn.felix.biblioteca.api.impl
+Bundle-SymbolicName: cl.ucn.felix.biblioteca.api.impl
+Bundle-Version: 1.0.0
+Created-By: Apache Maven Bundle Plugin 5.1.9
+Export-Package: cl.ucn.felix.biblioteca.api.impl;version="1.0.0";uses:="
+ cl.ucn.felix.biblioteca.api"
+Import-Package: cl.ucn.felix.biblioteca.api;version="[1.0,2)",org.osgi.f
+ ramework;version="[1.8,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=11))"
+Tool: Bnd-6.3.1.202206071316

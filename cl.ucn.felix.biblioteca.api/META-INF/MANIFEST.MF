@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1701987825162
+Bnd-LastModified: 1702083926821
 Build-Jdk-Spec: 18
 Bundle-ManifestVersion: 2
 Bundle-Name: cl.ucn.felix.biblioteca.api

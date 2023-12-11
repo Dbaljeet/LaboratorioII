@@ -1,0 +1,6 @@
+cl\ucn\felix\biblioteca\servicio\impl\activador\ServicioImplActivador.class
+cl\ucn\felix\biblioteca\servicio\api\ServicioInventarioLibro.class
+cl\ucn\felix\biblioteca\servicio\api\ExcepcionSesionNoValidaTiempoEjecucion.class
+cl\ucn\felix\biblioteca\servicio\api\ExcepcionCredencialInvalida.class
+cl\ucn\felix\biblioteca\servicio\api\ServicioInventarioLibroImpl.class
+cl\ucn\felix\biblioteca\servicio\api\Autenticacion.class
